@@ -12,3 +12,4 @@
 ## Autorzy
 
 [Julian9B](https://github.com/Julian9B)
+[L0LON](https://github.com/L0LON)
