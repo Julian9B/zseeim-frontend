@@ -1,4 +1,4 @@
-# Frontend do nowej strony ZSEEiM
+# Projekt frontendu do nowej strony ZSEEiM Bielsko-Biała
 
 ## Obecna strona ZSEEiM
 
