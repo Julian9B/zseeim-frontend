@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*****************************************************/
+
+header {
+    height: calc(100vh - 65px);
+}
+
+header .headerBackground {
+    background-image: url('images/main.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+header .headerBackground * {
+    height: 100px;
+    position: absolute;
+}
+
+header .headerBackground .logo {
+    top: 25px;
+    left: 25px;
+}
+
+header .headerBackground .gold {
+    top: 25px;
+    left: 205px;
+}
+
+header .headerBackground .country {
+    top: 25px;
+    right: 230px;
+}
+
+header .headerBackground .town {
+    top: 25px;
+    right: 25px;
+}
+
+header .headerBackground .accessibility {
+    height: 65px;
+    width: 65px;
+    bottom: 95px;
+    right: 25px;
+    background-color: #0680C1;
+    border-radius: 5px;
+}
+
+header .headerBackground .accessibility .icon {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .headerBackground .accessibility:hover {
+    background-color: #036AA0;
+}
+
+.navbar {
+    background-color: #0680C1;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    width: 12%;
+    height: 65px;
+}
+
+.navbar ul li p {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar ul li p a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li:hover {
+    background-color: #036AA0;
+}
+
+/*****************************************************/
+
+main section {
+    padding: 30px;
+    height: 300px;
+}
+
+main section h1 {
+    font-weight: normal;
+}
+
+main section:nth-child(odd) {
+    background-color: white;
+}
+
+main section:nth-child(even) {
+    background-color: #F6F6F6;
+}
+
+/*****************************************************/
+
+footer {
+    background-color: #0680C1;
+    height: 100px
+}
+
+footer .archive {
+    position: relative;
+    top: 25px;
+    left: 25px;
+    color: white;
+}
+
+footer .report {
+    position: relative;
+    top: 25px;
+    left: 75px;
+    color: red;
+}
+
+footer input[type=text] {
+    position: relative;
+    top: 25px;
+    left: 150px;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
