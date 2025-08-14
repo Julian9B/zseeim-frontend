@@ -102,7 +102,6 @@ header .headerBackground .accessibility:hover {
 
 main section {
     padding: 30px;
-    height: 300px;
 }
 
 main section h1 {
@@ -115,6 +114,55 @@ main section:nth-child(odd) {
 
 main section:nth-child(even) {
     background-color: #F6F6F6;
+}
+
+main .newsContainer {
+    display: inline-block;
+    width: 33%;
+    height: 30vw;
+    background-color: lightgray;
+    margin: 20px auto;
+}
+
+main .projectsContainer {
+    display: inline-block;
+    width: 33%;
+    height: 30vw;
+    background-color: lightgray;
+    margin: 20px auto;
+}
+
+main .fieldsContainer {
+    display: inline-block;
+    width: 14%;
+    height: 20vw;
+    background-color: lightgray;
+    margin: 20px auto;
+}
+
+main .supportersContainer {
+    display: inline-block;
+    width: 8%;
+    height: 7vw;
+    background-color: lightgray;
+    margin: 20px auto;
+}
+
+main .buttonContainer {
+    margin-bottom: 30px;
+}
+
+main .buttonContainer .moreButton {
+    position: absolute;
+    right: 30px;
+    border: 0;
+    background-color: white;
+    font-size: large;
+    color: #0680C1;
+}
+
+main .buttonContainer .moreButton:hover {
+    color: #036AA0;
 }
 
 /*****************************************************/
@@ -141,7 +189,7 @@ footer .report {
 footer input[type=text] {
     position: relative;
     top: 25px;
-    left: 150px;
+    left: 125px;
     padding: 6px;
     border: none;
     margin-top: 8px;
