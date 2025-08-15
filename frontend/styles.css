@@ -58,11 +58,14 @@ header .headerBackground .accessibility .icon {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 header .headerBackground .accessibility:hover {
     background-color: #036AA0;
 }
+
+/*****************************************************/
 
 .navbar {
     background-color: #0680C1;
@@ -79,6 +82,7 @@ header .headerBackground .accessibility:hover {
 .navbar ul li {
     width: 12%;
     height: 65px;
+    cursor: pointer;
 }
 
 .navbar ul li p {
@@ -96,6 +100,20 @@ header .headerBackground .accessibility:hover {
 
 .navbar ul li:hover {
     background-color: #036AA0;
+}
+
+.navbar ul li .subNavbar {
+    display: none;
+    background-color: #036AA0;
+    position: absolute;
+    left: 0;
+    bottom: 65px;
+    height: 40vh;
+    width: 100vw;
+}
+
+.navbar ul li:hover .subNavbar {
+    display: block;
 }
 
 /*****************************************************/
@@ -159,6 +177,7 @@ main .buttonContainer .moreButton {
     background-color: white;
     font-size: large;
     color: #0680C1;
+    cursor: pointer;
 }
 
 main .buttonContainer .moreButton:hover {
@@ -179,11 +198,19 @@ footer .archive {
     color: white;
 }
 
+footer .archive:hover {
+    color: lightgray;
+}
+
 footer .report {
     position: relative;
     top: 25px;
     left: 75px;
-    color: red;
+    color: pink;
+}
+
+footer .report:hover {
+    color: rgb(255, 118, 118);
 }
 
 footer input[type=text] {
