@@ -79,13 +79,14 @@ header .headerBackground .accessibility:hover {
     display: flex;
 }
 
-.navbar ul li {
-    width: 12%;
+.navbar ul li .navItem {
+    display: inline-block;
+    width: 11.11vw;
     height: 65px;
     cursor: pointer;
 }
 
-.navbar ul li p {
+.navbar ul li .navItem p {
     text-align: center;
     position: relative;
     top: 50%;
@@ -93,7 +94,7 @@ header .headerBackground .accessibility:hover {
     transform: translate(-50%, -50%);
 }
 
-.navbar ul li p a {
+.navbar ul li .navItem {
     color: white;
     text-decoration: none;
 }
@@ -105,15 +106,43 @@ header .headerBackground .accessibility:hover {
 .navbar ul li .subNavbar {
     display: none;
     background-color: #036AA0;
+    color: white;
     position: absolute;
     left: 0;
-    bottom: 65px;
-    height: 40vh;
+    bottom: 100%;
     width: 100vw;
 }
 
 .navbar ul li:hover .subNavbar {
     display: block;
+}
+
+.navbar ul li .subNavbar li {
+    width: 12.235vw;
+    display: inline-block;
+    justify-content: center;
+    padding: 20px 0 35px 0;
+    cursor: pointer;
+}
+
+.navbar ul li .subNavbar li:hover {
+    background-color: #0680C1;
+}
+
+.navbar ul li .subNavbar li img {
+    height: 75px;
+    display: block;
+    margin: auto
+}
+
+.navbar ul li .subNavbar li p {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.navbar ul li .subNavbar li .highlighted {
+    color: #9DFF00;
 }
 
 /*****************************************************/
