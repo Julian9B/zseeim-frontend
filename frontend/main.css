@@ -109,8 +109,15 @@ header .headerBackground .accessibility:hover {
     color: white;
     position: absolute;
     left: 0;
-    bottom: 100%;
     width: 100vw;
+}
+
+.navbar ul li .subNavbarBottom {
+    top: 100%;
+}
+
+.navbar ul li .subNavbarTop {
+    bottom: 100%;
 }
 
 .navbar ul li:hover .subNavbar {
@@ -126,7 +133,7 @@ header .headerBackground .accessibility:hover {
 }
 
 .navbar ul li .subNavbar li:hover {
-    background-color: #0680C1;
+    background-color: #035b8b;
 }
 
 .navbar ul li .subNavbar li img {
@@ -228,7 +235,7 @@ footer .archive {
 }
 
 footer .archive:hover {
-    color: lightgray;
+    color: lightblue;
 }
 
 footer .report {
