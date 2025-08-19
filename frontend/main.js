@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 onscroll = (event) => {
     let subNavbars = document.querySelectorAll(".subNavbar");
 
-    if(window.scrollY > 316) {
+    if(window.scrollY > 325) {
         subNavbars.forEach(subNavbar => {
             subNavbar.classList.remove("subNavbarTop");
             subNavbar.classList.add("subNavbarBottom");

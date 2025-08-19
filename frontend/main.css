@@ -106,7 +106,6 @@ header .headerBackground .accessibility:hover {
 .navbar ul li .subNavbar {
     display: none;
     background-color: #036AA0;
-    color: white;
     position: absolute;
     left: 0;
     width: 100vw;
@@ -126,7 +125,9 @@ header .headerBackground .accessibility:hover {
 
 .navbar ul li .subNavbar li {
     width: 12.235vw;
+    height: 100px;
     display: inline-block;
+    vertical-align: middle;
     justify-content: center;
     padding: 20px 0 35px 0;
     cursor: pointer;
@@ -134,6 +135,11 @@ header .headerBackground .accessibility:hover {
 
 .navbar ul li .subNavbar li:hover {
     background-color: #035b8b;
+}
+
+.navbar ul li .subNavbar li a {
+    color: white;
+    text-decoration: none;
 }
 
 .navbar ul li .subNavbar li img {
