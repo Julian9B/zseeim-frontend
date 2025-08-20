@@ -11,7 +11,7 @@ header {
 }
 
 header .headerBackground {
-    background-image: url('images/main.png');
+    background-image: url('images/pictures/main.png');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -74,19 +74,18 @@ header .headerBackground .accessibility:hover {
     z-index: 10;
 }
 
-.navbar ul {
+.navbar .navbarList {
     list-style: none;
-    display: flex;
+    height: 65px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
 }
 
-.navbar ul li .navItem {
-    display: inline-block;
-    width: 11.11vw;
-    height: 65px;
+.navbar .navbarList li .navItem {
     cursor: pointer;
 }
 
-.navbar ul li .navItem p {
+.navbar .navbarList li .navItem p {
     text-align: center;
     position: relative;
     top: 50%;
@@ -94,16 +93,16 @@ header .headerBackground .accessibility:hover {
     transform: translate(-50%, -50%);
 }
 
-.navbar ul li .navItem {
+.navbar .navbarList li .navItem {
     color: white;
     text-decoration: none;
 }
 
-.navbar ul li:hover {
+.navbar .navbarList li:hover {
     background-color: #036AA0;
 }
 
-.navbar ul li .subNavbar {
+.navbar .navbarList li .subNavbar {
     display: none;
     background-color: #036AA0;
     position: absolute;
@@ -111,19 +110,19 @@ header .headerBackground .accessibility:hover {
     width: 100vw;
 }
 
-.navbar ul li .subNavbarBottom {
+.navbar .navbarList li .subNavbarBottom {
     top: 100%;
 }
 
-.navbar ul li .subNavbarTop {
+.navbar .navbarList li .subNavbarTop {
     bottom: 100%;
 }
 
-.navbar ul li:hover .subNavbar {
+.navbar .navbarList li:hover .subNavbar {
     display: block;
 }
 
-.navbar ul li .subNavbar li {
+.navbar .navbarList li .subNavbar li {
     width: 12.235vw;
     height: 100px;
     display: inline-block;
@@ -133,28 +132,28 @@ header .headerBackground .accessibility:hover {
     cursor: pointer;
 }
 
-.navbar ul li .subNavbar li:hover {
+.navbar .navbarList li .subNavbar li:hover {
     background-color: #035b8b;
 }
 
-.navbar ul li .subNavbar li a {
+.navbar .navbarList li .subNavbar li a {
     color: white;
     text-decoration: none;
 }
 
-.navbar ul li .subNavbar li img {
+.navbar .navbarList li .subNavbar li img {
     height: 75px;
     display: block;
     margin: auto
 }
 
-.navbar ul li .subNavbar li p {
+.navbar .navbarList li .subNavbar li p {
     width: 100%;
     text-align: center;
     position: relative;
 }
 
-.navbar ul li .subNavbar li .highlighted {
+.navbar .navbarList li .subNavbar li .highlighted {
     color: #9DFF00;
 }
 
@@ -173,46 +172,101 @@ main section:nth-child(odd) {
 }
 
 main section:nth-child(even) {
-    background-color: #F6F6F6;
+    background-color: #f0f0f0;
 }
 
-main .newsContainer {
-    display: inline-block;
-    width: 33%;
+main section .containerList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+main section .containerList .containerFrame {
+    padding: 10px;
+}
+
+main section .containerList .container {
+    cursor: pointer;
+}
+
+main section .containerList .container:hover {
+    transition: 0.2s;
+}
+
+main section .containerList .thumbnailContainer {
+    background-color: white;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+}
+
+main section .containerList .largeThumbnailContainer {
     height: 30vw;
-    background-color: lightgray;
+    border-radius: 10px;
+}
+
+main section .containerList .largeThumbnailContainer:hover {
+    transform: scale(1.02);
+}
+
+main section .containerList .smallThumbnailContainer {
+    height: 16vw;
+    border-radius: 5px;
+}
+
+main section .containerList .smallThumbnailContainer:hover {
+    transform: scale(1.05);
+}
+
+main section .containerList .thumbnailContainer * {
+    display: block;
+    margin: auto;
+}
+
+main section .containerList .thumbnailContainer .imageContainer {
+    display: flex;
+    justify-content: center;
+    height: 75%;
+}
+
+main section .containerList .thumbnailContainer .imageContainer img {
+  height: 100%;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+main section .containerList .thumbnailContainer div {
+    background-color: white;
+    height: 25%;
+}
+
+main section .containerList .thumbnailContainer div p {
+    font-size: large;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+main section .containerList .logoContainer {
+    vertical-align: middle;
+    justify-content: center;
+    height: 7.75vw;
     margin: 20px auto;
 }
 
-main .projectsContainer {
-    display: inline-block;
-    width: 33%;
-    height: 30vw;
-    background-color: lightgray;
-    margin: 20px auto;
+main section .containerList .logoContainer:hover {
+    transform: scale(1.2);
 }
 
-main .fieldsContainer {
-    display: inline-block;
-    width: 14%;
-    height: 20vw;
-    background-color: lightgray;
-    margin: 20px auto;
+main section .containerList .logoContainer img {
+    height: 7.75vw;
+    margin: auto;
 }
 
-main .supportersContainer {
-    display: inline-block;
-    width: 8%;
-    height: 7vw;
-    background-color: lightgray;
-    margin: 20px auto;
-}
-
-main .buttonContainer {
+main section .buttonContainer {
     margin-bottom: 30px;
 }
 
-main .buttonContainer .moreButton {
+main section .buttonContainer .moreButton {
     position: absolute;
     right: 30px;
     border: 0;
@@ -222,8 +276,8 @@ main .buttonContainer .moreButton {
     cursor: pointer;
 }
 
-main .buttonContainer .moreButton:hover {
-    color: #036AA0;
+main section .buttonContainer .moreButton:hover {
+    color: #035b8b;
 }
 
 /*****************************************************/
