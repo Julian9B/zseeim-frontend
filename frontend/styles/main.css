@@ -1,0 +1,64 @@
+header {
+    height: calc(100vh - 65px);
+}
+
+header .headerBackground {
+    background-image: url('../images/pictures/main.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+header .headerBackground * {
+    height: 100px;
+    position: absolute;
+}
+
+header .headerBackground .logo {
+    top: 25px;
+    left: 25px;
+}
+
+header .headerBackground .gold {
+    top: 25px;
+    left: 205px;
+}
+
+header .headerBackground .country {
+    top: 25px;
+    right: 230px;
+}
+
+header .headerBackground .town {
+    top: 25px;
+    right: 25px;
+}
+
+header .headerBackground .accessibility {
+    height: 65px;
+    width: 65px;
+    bottom: 95px;
+    right: 25px;
+    background-color: #0680C1;
+    border-radius: 5px;
+}
+
+header .headerBackground .accessibility .icon {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+header .headerBackground .accessibility:hover {
+    background-color: #036AA0;
+}
+
+/*****************************************************/
+
+.navbar .navbarList {
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+}

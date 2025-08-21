@@ -6,67 +6,6 @@
 
 /*****************************************************/
 
-header {
-    height: calc(100vh - 65px);
-}
-
-header .headerBackground {
-    background-image: url('images/pictures/main.png');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-}
-
-header .headerBackground * {
-    height: 100px;
-    position: absolute;
-}
-
-header .headerBackground .logo {
-    top: 25px;
-    left: 25px;
-}
-
-header .headerBackground .gold {
-    top: 25px;
-    left: 205px;
-}
-
-header .headerBackground .country {
-    top: 25px;
-    right: 230px;
-}
-
-header .headerBackground .town {
-    top: 25px;
-    right: 25px;
-}
-
-header .headerBackground .accessibility {
-    height: 65px;
-    width: 65px;
-    bottom: 95px;
-    right: 25px;
-    background-color: #0680C1;
-    border-radius: 5px;
-}
-
-header .headerBackground .accessibility .icon {
-    height: 50px;
-    width: 50px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-
-header .headerBackground .accessibility:hover {
-    background-color: #036AA0;
-}
-
-/*****************************************************/
-
 .navbar {
     background-color: #0680C1;
     position: sticky;
@@ -76,13 +15,13 @@ header .headerBackground .accessibility:hover {
 
 .navbar .navbarList {
     list-style: none;
-    height: 65px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
 }
 
 .navbar .navbarList li .navItem {
+    display: block;
     cursor: pointer;
+    height: 65px;
 }
 
 .navbar .navbarList li .navItem p {
@@ -110,6 +49,10 @@ header .headerBackground .accessibility:hover {
     width: 100vw;
 }
 
+.navbar .navbarList li:hover .subNavbar {
+    display: block;
+}
+
 .navbar .navbarList li .subNavbarBottom {
     top: 100%;
 }
@@ -118,17 +61,11 @@ header .headerBackground .accessibility:hover {
     bottom: 100%;
 }
 
-.navbar .navbarList li:hover .subNavbar {
-    display: block;
-}
-
 .navbar .navbarList li .subNavbar li {
     width: 12.235vw;
-    height: 100px;
     display: inline-block;
     vertical-align: middle;
     justify-content: center;
-    padding: 20px 0 35px 0;
     cursor: pointer;
 }
 
@@ -137,6 +74,9 @@ header .headerBackground .accessibility:hover {
 }
 
 .navbar .navbarList li .subNavbar li a {
+    display: block;
+    height: 100px;
+    padding: 20px 0 35px 0;
     color: white;
     text-decoration: none;
 }
@@ -243,7 +183,8 @@ main section .containerList .thumbnailContainer div p {
     font-size: large;
     position: relative;
     top: 20px;
-    left: 20px;
+    width: 100%;
+    text-align: center;
 }
 
 main section .containerList .logoContainer {
@@ -279,6 +220,7 @@ main section .buttonContainer .moreButton {
 main section .buttonContainer .moreButton:hover {
     color: #035b8b;
 }
+
 
 /*****************************************************/
 

@@ -1,0 +1,27 @@
+.navbar .navbarList {
+    grid-template-columns: 102px repeat(auto-fit, minmax(10px, 1fr));
+}
+
+/*****************************************************/
+
+.navbar .mainPageLink img {
+    display: block;
+    height: 65px;
+}
+
+.navbar .mainPageLink:hover img {
+    filter: brightness(0.84);
+}
+
+header {
+    height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+header img {
+    width: 100vw;
+    object-fit: cover;
+    flex: 0 0 auto;
+}
