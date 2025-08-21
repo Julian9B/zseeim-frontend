@@ -10,7 +10,7 @@
 }
 
 .navbar .mainPageLink:hover img {
-    filter: brightness(0.84);
+    filter: brightness(0.93) contrast(1.4) saturate(0.7);
 }
 
 header {
