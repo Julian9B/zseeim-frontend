@@ -8,8 +8,20 @@ html {
   font-size: 16px;
 }
 
+/*****************************************************/
+
 .grayscale {
     filter: grayscale(100%);
+}
+
+.contrastYellow {
+    background-color: black !important;
+    color: yellow !important;
+}
+
+.contrastWhite {
+    background-color: black !important;
+    color: white !important;
 }
 
 /*****************************************************/
@@ -144,7 +156,7 @@ header .accessibility:hover .accessibilitySettings {
 
 header .accessibility .accessibilitySettings button {
     position: static;
-    width: 200px;
+    width: 225px;
     min-height: 50px;
     background-color: #f0f0f0;
     border: none;
@@ -283,6 +295,7 @@ main section .buttonContainer .moreButton {
 
 main section .buttonContainer .moreButton:hover {
     color: #035b8b;
+    text-decoration: underline;
 }
 
 
