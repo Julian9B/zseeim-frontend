@@ -34,29 +34,6 @@ header .headerBackground .town {
     right: 25px;
 }
 
-header .headerBackground .accessibility {
-    height: 65px;
-    width: 65px;
-    bottom: 95px;
-    right: 25px;
-    background-color: #0680C1;
-    border-radius: 5px;
-}
-
-header .headerBackground .accessibility .icon {
-    height: 50px;
-    width: 50px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
-
-header .headerBackground .accessibility:hover {
-    background-color: #036AA0;
-}
-
 /*****************************************************/
 
 .navbar .navbarList {

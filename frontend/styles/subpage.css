@@ -10,11 +10,11 @@
 }
 
 .navbar .mainPageLink:hover img {
-    filter: brightness(0.93) contrast(1.4) saturate(0.7);
+    filter: brightness(0.91) contrast(1.4) saturate(0.7);
 }
 
 header {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 191.5px);
     display: flex;
     justify-content: center;
     vertical-align: middle;

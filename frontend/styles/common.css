@@ -4,6 +4,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  font-size: 16px;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
 /*****************************************************/
 
 .navbar {
@@ -75,7 +83,7 @@
 
 .navbar .navbarList li .subNavbar li a {
     display: block;
-    height: 100px;
+    min-height: 110px;
     padding: 20px 0 35px 0;
     color: white;
     text-decoration: none;
@@ -99,12 +107,66 @@
 
 /*****************************************************/
 
+header .accessibility {
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    bottom: 95px;
+    right: 25px;
+    background-color: #0680C1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header .accessibility:hover {
+    background-color: #036AA0;
+}
+
+header .accessibility .icon {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .accessibility .accessibilitySettings {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 65px;
+}
+
+header .accessibility:hover .accessibilitySettings {
+    display: block;
+}
+
+header .accessibility .accessibilitySettings button {
+    position: static;
+    width: 200px;
+    min-height: 50px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 0;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+header .accessibility .accessibilitySettings button:hover {
+    background-color: lightgray;
+}
+
+/*****************************************************/
+
 main section {
     padding: 30px;
 }
 
 main section h1 {
+    font-size: 2rem;
     font-weight: normal;
+    margin: 15px 10px;
 }
 
 main section:nth-child(odd) {
@@ -145,7 +207,7 @@ main section .containerList .largeThumbnailContainer {
 }
 
 main section .containerList .largeThumbnailContainer:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 main section .containerList .smallThumbnailContainer {
@@ -175,16 +237,18 @@ main section .containerList .thumbnailContainer .imageContainer img {
 }
 
 main section .containerList .thumbnailContainer div {
+    display: block;
     background-color: white;
     height: 25%;
 }
 
 main section .containerList .thumbnailContainer div p {
-    font-size: large;
-    position: relative;
-    top: 20px;
-    width: 100%;
     text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.1rem;
 }
 
 main section .containerList .logoContainer {
@@ -212,9 +276,9 @@ main section .buttonContainer .moreButton {
     right: 30px;
     border: 0;
     background-color: white;
-    font-size: large;
     color: #0680C1;
     cursor: pointer;
+    font-size: 1.3rem;
 }
 
 main section .buttonContainer .moreButton:hover {
@@ -259,5 +323,5 @@ footer input[type=text] {
     border: none;
     margin-top: 8px;
     margin-right: 16px;
-    font-size: 17px;
+    font-size: 1.1rem;
 }
