@@ -4,6 +4,8 @@
 
 [Zobacz stronę](https://zseeim.edu.pl/)
 
+WAŻNE: Pliki wymagają uruchomienia na serwerze na żywo, aby wszystkie funkcje działały prawidłowo.
+
 ## Prototyp Figma
 
 [Zobacz prototyp](https://www.figma.com/proto/2JfnEbqCSngBNmwLVMs89w/ZSEEIM---frontend?node-id=73-2&p=f&t=b14youJPkA3nmA0x-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=73%3A2)
