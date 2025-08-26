@@ -175,18 +175,29 @@ main section {
     padding: 30px;
 }
 
-main section h1 {
-    font-size: 2rem;
-    font-weight: normal;
-    margin: 15px 10px;
-}
-
 main section:nth-child(odd) {
     background-color: white;
 }
 
 main section:nth-child(even) {
     background-color: #f0f0f0;
+}
+
+main section h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 15px 10px;
+}
+
+main section p {
+    font-size: 1.2rem;
+    padding: 25px 10px;
+}
+
+main section p img {
+    float: right;
+    width: 35%;
+    padding: 10px;
 }
 
 main section .containerList {
@@ -199,6 +210,9 @@ main section .containerList .containerFrame {
 }
 
 main section .containerList .container {
+    display: block;
+    color: black;
+    text-decoration: none;
     cursor: pointer;
 }
 
