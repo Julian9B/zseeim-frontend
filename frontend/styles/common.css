@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 /*****************************************************/
@@ -67,10 +67,11 @@ html {
     position: absolute;
     left: 0;
     width: 100vw;
+    flex-wrap: wrap;
 }
 
 .navbar .navbarList li:hover .subNavbar {
-    display: block;
+    display: flex;
 }
 
 .navbar .navbarList li .subNavbarBottom {
@@ -82,10 +83,10 @@ html {
 }
 
 .navbar .navbarList li .subNavbar li {
-    width: 12.235vw;
+    flex: 1 1 12.5vw;
+    max-width: 12.5vw;
     display: inline-block;
     vertical-align: middle;
-    justify-content: center;
     cursor: pointer;
 }
 
@@ -96,7 +97,7 @@ html {
 .navbar .navbarList li .subNavbar li a {
     display: block;
     min-height: 110px;
-    padding: 20px 0 35px 0;
+    padding: 25px 0;
     color: white;
     text-decoration: none;
 }
@@ -113,7 +114,7 @@ html {
     position: relative;
 }
 
-.navbar .navbarList li .subNavbar li .highlighted {
+.navbar .navbarList li .subNavbar .highlighted {
     color: #9DFF00;
 }
 
@@ -154,14 +155,19 @@ header .accessibility:hover .accessibilitySettings {
     display: block;
 }
 
-header .accessibility .accessibilitySettings button {
+header .accessibility .accessibilitySettings a {
+    display: block;
     position: static;
     width: 225px;
-    min-height: 50px;
+    line-height: 50px;
+    text-align: center;
     background-color: #f0f0f0;
     border: none;
     border-radius: 0;
+    color: black;
     font-size: 1.05rem;
+    text-decoration: none;
+    user-select: none;
     cursor: pointer;
 }
 
@@ -257,9 +263,9 @@ main section .containerList .thumbnailContainer .imageContainer {
 }
 
 main section .containerList .thumbnailContainer .imageContainer img {
-  height: 100%;
-  object-fit: cover;
-  flex: 0 0 auto;
+    height: 100%;
+    object-fit: cover;
+    flex: 0 0 auto;
 }
 
 main section .containerList .thumbnailContainer div {
@@ -278,9 +284,6 @@ main section .containerList .thumbnailContainer div p {
 }
 
 main section .containerList .logoContainer {
-    vertical-align: middle;
-    justify-content: center;
-    height: 7.75vw;
     margin: 20px auto;
 }
 
@@ -288,8 +291,15 @@ main section .containerList .logoContainer:hover {
     transform: scale(1.2);
 }
 
-main section .containerList .logoContainer img {
-    height: 7.75vw;
+main section .containerList .logoContainer .imageContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main section .containerList .logoContainer .imageContainer img {
+    max-width: 8vw;
     margin: auto;
 }
 
@@ -305,6 +315,7 @@ main section .buttonContainer .moreButton {
     color: #0680C1;
     cursor: pointer;
     font-size: 1.3rem;
+    text-decoration: none;
 }
 
 main section .buttonContainer .moreButton:hover {
