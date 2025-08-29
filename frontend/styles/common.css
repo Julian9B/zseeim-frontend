@@ -171,7 +171,7 @@ header .accessibility .accessibilitySettings a {
     cursor: pointer;
 }
 
-header .accessibility .accessibilitySettings button:hover {
+header .accessibility .accessibilitySettings a:hover {
     background-color: lightgray;
 }
 
@@ -207,12 +207,8 @@ main section p img {
 }
 
 main section .containerList {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-}
-
-main section .containerList .containerFrame {
-    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 main section .containerList .container {
@@ -228,13 +224,13 @@ main section .containerList .container:hover {
 
 main section .containerList .thumbnailContainer {
     background-color: white;
-    margin: 20px auto;
+    margin: 20px auto 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     overflow: hidden;
 }
 
 main section .containerList .largeThumbnailContainer {
-    height: 30vw;
+    height: 29vw;
     border-radius: 10px;
 }
 
@@ -243,12 +239,12 @@ main section .containerList .largeThumbnailContainer:hover {
 }
 
 main section .containerList .smallThumbnailContainer {
-    height: 16vw;
+    height: 12vw;
     border-radius: 5px;
 }
 
 main section .containerList .smallThumbnailContainer:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 main section .containerList .thumbnailContainer * {
@@ -288,7 +284,7 @@ main section .containerList .logoContainer {
 }
 
 main section .containerList .logoContainer:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 main section .containerList .logoContainer .imageContainer {
@@ -299,7 +295,8 @@ main section .containerList .logoContainer .imageContainer {
 }
 
 main section .containerList .logoContainer .imageContainer img {
-    max-width: 8vw;
+    max-width: 10vw;
+    max-height: 4.5vw;
     margin: auto;
 }
 
