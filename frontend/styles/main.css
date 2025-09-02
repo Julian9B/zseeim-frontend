@@ -16,17 +16,17 @@ header .headerBackground * {
 
 header .headerBackground .logo {
     top: 25px;
-    left: 25px;
+    left: 130px;
 }
 
 header .headerBackground .gold {
     top: 25px;
-    left: 205px;
+    left: 305px;
 }
 
 header .headerBackground .country {
     top: 25px;
-    right: 230px;
+    left: 25px;
 }
 
 header .headerBackground .town {

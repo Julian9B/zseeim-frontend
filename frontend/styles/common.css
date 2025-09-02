@@ -105,7 +105,7 @@ html {
 .navbar .navbarList li .subNavbar li img {
     height: 75px;
     display: block;
-    margin: auto
+    margin: auto;
 }
 
 .navbar .navbarList li .subNavbar li p {
@@ -121,7 +121,8 @@ html {
 /*****************************************************/
 
 header .accessibility {
-    position: absolute;
+    position: fixed;
+    z-index: 10;
     height: 65px;
     width: 65px;
     bottom: 95px;
@@ -179,6 +180,7 @@ header .accessibility .accessibilitySettings a:hover {
 
 main section {
     padding: 30px;
+    overflow: auto;
 }
 
 main section:nth-child(odd) {
@@ -325,12 +327,12 @@ main section .buttonContainer .moreButton:hover {
 
 footer {
     background-color: #0680C1;
-    height: 100px
+    height: 90px
 }
 
 footer .archive {
     position: relative;
-    top: 25px;
+    top: 20px;
     left: 25px;
     color: white;
 }
@@ -341,7 +343,7 @@ footer .archive:hover {
 
 footer .report {
     position: relative;
-    top: 25px;
+    top: 20px;
     left: 75px;
     color: pink;
 }
@@ -352,7 +354,7 @@ footer .report:hover {
 
 footer input[type=text] {
     position: relative;
-    top: 25px;
+    top: 20px;
     left: 125px;
     padding: 6px;
     border: none;
