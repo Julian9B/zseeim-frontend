@@ -26,6 +26,24 @@ html {
 
 /*****************************************************/
 
+.fontIcon {
+    position: relative;
+}
+
+.smallFontIcon {
+    height: 0.9rem;
+    stroke-width: 2.5;
+    top: 1px;
+}
+
+.largeFontIcon {
+    height: 1.2rem;
+    stroke-width: 1.9;
+    top: 4px;
+}
+
+/*****************************************************/
+
 .navbar {
     background-color: #0680C1;
     position: sticky;
@@ -115,12 +133,12 @@ html {
 }
 
 .navbar .navbarList li .subNavbar .highlighted {
-    color: #9DFF00;
+    color: greenyellow;
 }
 
 /*****************************************************/
 
-header .accessibility {
+.accessibility {
     position: fixed;
     z-index: 10;
     height: 65px;
@@ -132,11 +150,11 @@ header .accessibility {
     cursor: pointer;
 }
 
-header .accessibility:hover {
+.accessibility:hover {
     background-color: #036AA0;
 }
 
-header .accessibility .icon {
+.accessibility .icon {
     height: 50px;
     width: 50px;
     position: relative;
@@ -145,18 +163,18 @@ header .accessibility .icon {
     transform: translate(-50%, -50%);
 }
 
-header .accessibility .accessibilitySettings {
+.accessibility .accessibilitySettings {
     display: none;
     position: absolute;
     bottom: 0;
     right: 65px;
 }
 
-header .accessibility:hover .accessibilitySettings {
+.accessibility:hover .accessibilitySettings {
     display: block;
 }
 
-header .accessibility .accessibilitySettings a {
+.accessibility .accessibilitySettings a {
     display: block;
     position: static;
     width: 225px;
@@ -172,7 +190,7 @@ header .accessibility .accessibilitySettings a {
     cursor: pointer;
 }
 
-header .accessibility .accessibilitySettings a:hover {
+.accessibility .accessibilitySettings a:hover {
     background-color: lightgray;
 }
 

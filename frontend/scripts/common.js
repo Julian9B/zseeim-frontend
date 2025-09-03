@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // wysoki kontrast
 
     const toggleContrastButton = document.querySelector(".toggleContrast");
-    const accessibility = document.querySelector("header .accessibility")
+    const accessibility = document.querySelector(".accessibility")
     const accessibilityChildren = accessibility.querySelectorAll('*');
     const navbar = document.querySelector(".navbar")
     const navbarChildren = navbar.querySelectorAll('*');
@@ -102,4 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
             child.classList.toggle("contrastWhite");
         });
     }
+
+    // ikony
+
+    feather.replace();
 });
