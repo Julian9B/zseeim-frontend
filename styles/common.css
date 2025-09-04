@@ -115,15 +115,17 @@ html {
 .navbar .navbarList li .subNavbar li a {
     display: block;
     min-height: 110px;
-    padding: 25px 0;
+    padding: 30px 0 10px 0;
     color: white;
     text-decoration: none;
 }
 
-.navbar .navbarList li .subNavbar li img {
-    height: 75px;
+.navbar .navbarList li .subNavbar li .imageIcon {
     display: block;
-    margin: auto;
+    stroke-width: 1.4px;
+    margin: 0 auto 10px auto;
+    max-width: 48px;
+    max-height: 48px;
 }
 
 .navbar .navbarList li .subNavbar li p {
@@ -328,7 +330,7 @@ main section .buttonContainer {
 
 main section .buttonContainer .moreButton {
     position: absolute;
-    right: 2%;
+    right: 2.7%;
     border: 0;
     background-color: white;
     color: #0680C1;
