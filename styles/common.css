@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%;
 }
 
 html {
@@ -101,8 +102,8 @@ html {
 }
 
 .navbar .navbarList li .subNavbar li {
-    flex: 1 1 12.5vw;
-    max-width: 12.5vw;
+    flex: 1 1 12.5%;
+    max-width: 12.5%;
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
