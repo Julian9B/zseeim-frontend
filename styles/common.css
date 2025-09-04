@@ -140,13 +140,13 @@ html {
 
 .accessibility {
     position: fixed;
-    z-index: 10;
-    height: 65px;
+    z-index: 15;
+    height: 75px;
     width: 65px;
-    bottom: 95px;
-    right: 25px;
+    top: 160px;
+    right: 0;
     background-color: #0680C1;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
     cursor: pointer;
 }
 
@@ -166,8 +166,9 @@ html {
 .accessibility .accessibilitySettings {
     display: none;
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 65px;
+    border: 1px solid black;
 }
 
 .accessibility:hover .accessibilitySettings {
@@ -259,7 +260,8 @@ main section .containerList .largeThumbnailContainer:hover {
 }
 
 main section .containerList .smallThumbnailContainer {
-    height: 12vw;
+    height: 14vw;
+    width: 12.5vw;
     border-radius: 5px;
 }
 
@@ -304,7 +306,7 @@ main section .containerList .logoContainer {
 }
 
 main section .containerList .logoContainer:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 
 main section .containerList .logoContainer .imageContainer {
@@ -326,7 +328,7 @@ main section .buttonContainer {
 
 main section .buttonContainer .moreButton {
     position: absolute;
-    right: 30px;
+    right: 2%;
     border: 0;
     background-color: white;
     color: #0680C1;
