@@ -14,7 +14,7 @@
 /*****************************************************/
 
 header {
-    height: calc(100vh - 191.5px);
+    height: calc(100vh - 170px);
     display: flex;
     justify-content: center;
     vertical-align: middle;
@@ -29,5 +29,5 @@ header img {
 /*****************************************************/
 
 main section h1 {
-    min-height: 50px;
+    min-height: 55px;
 }

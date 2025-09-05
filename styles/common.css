@@ -200,7 +200,7 @@ html {
 /*****************************************************/
 
 main section {
-    padding: 30px;
+    padding: 20px 30px 50px 30px;
     overflow: auto;
 }
 
@@ -220,10 +220,20 @@ main section h1 {
 
 main section p {
     font-size: 1.2rem;
-    padding: 25px 10px;
+    margin: 0 10px;
 }
 
-main section p img {
+main section ul {
+    font-size: 1.1rem;
+    list-style-position: inside;
+    margin-left: 10px;
+}
+
+main section ul li {
+    margin: 2px 0;
+}
+
+main section .textImage {
     float: right;
     width: 35%;
     padding: 10px;
@@ -262,7 +272,7 @@ main section .containerList .largeThumbnailContainer:hover {
 }
 
 main section .containerList .smallThumbnailContainer {
-    height: 14vw;
+    height: 30vh;
     width: 12.5vw;
     border-radius: 5px;
 }
