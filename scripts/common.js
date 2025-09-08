@@ -2,6 +2,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const html = document.documentElement;
 
+    // rozwijanie navbaru
+
+    const toggle = document.querySelector(".menuToggle");
+    const navbarList = document.querySelector(".navbarList");
+
+    toggle.addEventListener("click", () => {
+        navbarList.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".navItem").forEach(item => {
+        item.addEventListener("click", e => {
+            if (window.matchMedia("(pointer: coarse)").matches) {
+                const parentLi = item.parentElement;
+
+                document.querySelectorAll(".navbarList li").forEach(li => {
+                    if (li !== parentLi) li.classList.remove("active");
+                });
+
+                parentLi.classList.toggle("active");
+            }
+        });
+    });
+
     // wielkość tekstu
 
     let fontSize = parseInt(localStorage.getItem("fontSize")) || 16;

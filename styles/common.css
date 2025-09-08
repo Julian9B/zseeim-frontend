@@ -49,17 +49,23 @@ html {
     position: sticky;
     top: 0;
     z-index: 10;
+    user-select: none;
 }
 
 .navbar .navbarList {
     list-style: none;
     display: grid;
+    grid-auto-flow: column;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar .navbarList li .navItem {
     display: block;
     cursor: pointer;
     height: 65px;
+    color: white;
+    text-decoration: none;
 }
 
 .navbar .navbarList li .navItem p {
@@ -68,11 +74,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.navbar .navbarList li .navItem {
-    color: white;
-    text-decoration: none;
+    margin: 0;
 }
 
 .navbar .navbarList li:hover {
@@ -86,18 +88,18 @@ html {
     left: 0;
     width: 100%;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    z-index: 9;
 }
 
-.navbar .navbarList li:hover .subNavbar {
+.navbar .navbarList li.active .navItem {
+    background-color: #036AA0;
+}
+
+.navbar .navbarList li.active>.subNavbar {
     display: flex;
-}
-
-.navbar .navbarList li .subNavbarBottom {
-    top: 100%;
-}
-
-.navbar .navbarList li .subNavbarTop {
-    bottom: 100%;
+    position: static;
 }
 
 .navbar .navbarList li .subNavbar li {
@@ -132,6 +134,73 @@ html {
     width: 100%;
     text-align: center;
     position: relative;
+    margin: 0;
+}
+
+.navbar .menuToggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+@media (pointer: fine) {
+    .navbar .navbarList li:hover .subNavbar {
+        display: flex;
+    }
+
+    .navbar .navbarList li .subNavbarBottom {
+        top: 100%;
+    }
+
+    .navbar .navbarList li .subNavbarTop {
+        bottom: 100%;
+    }
+}
+
+@media (pointer: coarse) {
+    .navbar .menuToggle {
+        display: block;
+    }
+
+    .navbar .navbarList {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar .navbarList {
+        display: none;
+    }
+
+    .navbar .navbarList.open {
+        display: flex;
+    }
+
+    .navbar .navbarList li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar .navbarList li .subNavbar li {
+        flex: 1 1 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar .navbarList li .subNavbar li {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar .navbarList li .subNavbar li {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
 .navbar .navbarList li .subNavbar .highlighted {
@@ -241,70 +310,62 @@ main section .textImage {
 
 main section .containerList {
     display: flex;
-    justify-content: space-evenly;
 }
 
-main section .containerList .container {
+main section .containerList .containerFrame {
+    margin: 20px 0 25px;
+}
+
+main section .containerList .containerFrame .container {
+    margin: auto;
     display: block;
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
 
-main section .containerList .container:hover {
+main section .containerList .containerFrame .container:hover {
     transition: 0.2s;
 }
 
-main section .containerList .thumbnailContainer {
+main section .containerList .containerFrame .thumbnailContainer {
     background-color: white;
-    margin: 20px auto 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     overflow: hidden;
 }
 
-main section .containerList .largeThumbnailContainer {
-    height: 29vw;
-    border-radius: 10px;
-}
-
-main section .containerList .largeThumbnailContainer:hover {
+main section .containerList .largeContainerFrame .thumbnailContainer:hover {
     transform: scale(1.03);
 }
 
-main section .containerList .smallThumbnailContainer {
-    height: 30vh;
-    width: 12.5vw;
-    border-radius: 5px;
-}
-
-main section .containerList .smallThumbnailContainer:hover {
+main section .containerList .smallContainerFrame .thumbnailContainer:hover {
     transform: scale(1.06);
 }
 
-main section .containerList .thumbnailContainer * {
+main section .containerList .containerFrame .thumbnailContainer * {
     display: block;
     margin: auto;
 }
 
-main section .containerList .thumbnailContainer .imageContainer {
+main section .containerList .containerFrame .thumbnailContainer .imageContainer {
     display: flex;
     justify-content: center;
     height: 75%;
 }
 
-main section .containerList .thumbnailContainer .imageContainer img {
+main section .containerList .containerFrame .thumbnailContainer .imageContainer img {
     height: 100%;
     object-fit: cover;
     flex: 0 0 auto;
 }
 
-main section .containerList .thumbnailContainer div {
+main section .containerList .containerFrame .thumbnailContainer .titleContainer {
     display: block;
-    background-color: white;
     height: 25%;
+    background-color: white;
 }
 
-main section .containerList .thumbnailContainer div p {
+main section .containerList .containerFrame .thumbnailContainer div p {
     text-align: center;
     position: relative;
     top: 50%;
@@ -313,25 +374,84 @@ main section .containerList .thumbnailContainer div p {
     font-size: 1.1rem;
 }
 
-main section .containerList .logoContainer {
-    margin: 20px auto;
+@media (min-width: 1100.5px) {
+    main section .containerList .largeContainerFrame {
+        flex: 1 1 33.33%;
+        max-width: 33.33%;
+    }
+
+    main section .containerList .smallContainerFrame {
+        flex: 1 1 14.25%;
+        max-width: 14.25%;
+    }
+
+    main section .containerList .largeContainerFrame .container {
+        width: 95%;
+    }
+
+    main section .containerList .smallContainerFrame .container {
+        width: 90%;
+    }
+
+    main section .containerList .largeContainerFrame .thumbnailContainer {
+        height: 29vw;
+        border-radius: 10px;
+    }
+
+    main section .containerList .smallContainerFrame .thumbnailContainer {
+        height: 33vh;
+        border-radius: 5px;
+    }
+
+    main section .logoList {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    main section .logoList .logoContainer {
+        margin: 20px auto;
+    }
+
+    main section .logoList .logoContainer:hover {
+        transform: scale(1.1);
+    }
+
+    main section .logoList .logoContainer .imageContainer {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    main section .logoList .logoContainer .imageContainer img {
+        max-width: 10vw;
+        max-height: 4.5vw;
+        margin: auto;
+    }
 }
 
-main section .containerList .logoContainer:hover {
-    transform: scale(1.1);
-}
+@media (max-width: 1100.5px) {
+    main section .containerList {
+        display: block;
+    }
 
-main section .containerList .logoContainer .imageContainer {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    main section .containerList .containerFrame .thumbnailContainer {
+        height: 350px;
+        max-width: 350px;
+        border-radius: 10px;
+    }
 
-main section .containerList .logoContainer .imageContainer img {
-    max-width: 10vw;
-    max-height: 4.5vw;
-    margin: auto;
+    main section .logoList .logoContainer {
+        display: block;
+        margin: 50px 0;
+    }
+
+    main section .logoList .logoContainer .imageContainer img {
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 200px;
+    }
 }
 
 main section .buttonContainer {
@@ -339,8 +459,7 @@ main section .buttonContainer {
 }
 
 main section .buttonContainer .moreButton {
-    position: absolute;
-    right: 2.7%;
+    float: right;
     border: 0;
     background-color: white;
     color: #0680C1;

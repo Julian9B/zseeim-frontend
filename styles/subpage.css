@@ -3,12 +3,31 @@
 }
 
 .navbar .mainPageLink img {
-    display: block;
     height: 65px;
 }
 
 .navbar .mainPageLink:hover img {
     filter: brightness(0.91) contrast(1.4) saturate(0.7);
+}
+
+@media (pointer: fine) {
+    .navbar .mainPageLink img {
+        display: block;
+    }
+    
+    .navbar .mainPageLink p {
+        display: none;
+    }
+}
+
+@media (pointer: coarse) {
+    .navbar .mainPageLink img {
+        display: none;
+    }
+
+    .navbar .mainPageLink p {
+        display: block;
+    }
 }
 
 /*****************************************************/
