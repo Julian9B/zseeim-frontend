@@ -374,7 +374,7 @@ main section .containerList .containerFrame .thumbnailContainer div p {
     font-size: 1.1rem;
 }
 
-main section .logoList .logoContainer:hover {
+main section .logoList .logoContainer .imageContainer img:hover {
     transform: scale(1.1);
     transition: 0.2s;
 }
