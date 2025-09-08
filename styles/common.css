@@ -374,6 +374,11 @@ main section .containerList .containerFrame .thumbnailContainer div p {
     font-size: 1.1rem;
 }
 
+main section .logoList .logoContainer:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
 @media (min-width: 1100.5px) {
     main section .containerList .largeContainerFrame {
         flex: 1 1 33.33%;
@@ -410,10 +415,6 @@ main section .containerList .containerFrame .thumbnailContainer div p {
 
     main section .logoList .logoContainer {
         margin: 20px auto;
-    }
-
-    main section .logoList .logoContainer:hover {
-        transform: scale(1.1);
     }
 
     main section .logoList .logoContainer .imageContainer {
