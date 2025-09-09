@@ -249,7 +249,7 @@ html {
 .accessibility .accessibilitySettings a {
     display: block;
     position: static;
-    width: 225px;
+    width: 250px;
     line-height: 50px;
     text-align: center;
     background-color: #f0f0f0;
@@ -300,16 +300,6 @@ main section ul {
 
 main section ul li {
     margin: 2px 0;
-}
-
-main section .textImage {
-    float: right;
-    width: 35%;
-    padding: 10px;
-}
-
-main section .containerList {
-    display: flex;
 }
 
 main section .containerList .containerFrame {
@@ -380,14 +370,9 @@ main section .logoList .logoContainer .imageContainer img:hover {
 }
 
 @media (min-width: 1100.5px) {
-    main section .containerList .largeContainerFrame {
-        flex: 1 1 33.33%;
-        max-width: 33.33%;
-    }
-
-    main section .containerList .smallContainerFrame {
-        flex: 1 1 14.25%;
-        max-width: 14.25%;
+    main section .containerList {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12.5%, 1fr));
     }
 
     main section .containerList .largeContainerFrame .container {
@@ -432,6 +417,7 @@ main section .logoList .logoContainer .imageContainer img:hover {
 }
 
 @media (max-width: 1100.5px) {
+
     main section .containerList {
         display: block;
     }
@@ -452,6 +438,20 @@ main section .logoList .logoContainer .imageContainer img:hover {
         margin: auto;
         width: 100%;
         max-width: 200px;
+    }
+}
+
+@media (min-width: 800.5px) {
+    main section .textImage {
+        float: right;
+        width: 35%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 799.5px) {
+    main section .textImage {
+        width: 100%;
     }
 }
 
@@ -479,11 +479,10 @@ main section .buttonContainer .moreButton:hover {
 
 footer {
     background-color: #0680C1;
-    height: 90px
+    min-height: 90px
 }
 
 footer .archive {
-    position: relative;
     top: 20px;
     left: 25px;
     color: white;
@@ -494,7 +493,6 @@ footer .archive:hover {
 }
 
 footer .report {
-    position: relative;
     top: 20px;
     left: 75px;
     color: pink;
@@ -505,7 +503,6 @@ footer .report:hover {
 }
 
 footer input[type=text] {
-    position: relative;
     top: 20px;
     left: 125px;
     padding: 6px;
@@ -513,4 +510,23 @@ footer input[type=text] {
     margin-top: 8px;
     margin-right: 16px;
     font-size: 1.1rem;
+}
+
+@media (min-width: 800.5px) {
+    footer * {
+        position: relative;
+    }
+}
+
+@media (max-width: 799.5px) {
+    footer {
+        padding: 10px;
+    }
+
+    footer * {
+        display: block;
+        margin: 20px auto;
+        width: 95%;
+        text-align: center;
+    }
 }
