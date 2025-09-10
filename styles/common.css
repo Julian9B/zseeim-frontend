@@ -266,6 +266,28 @@ html {
     background-color: lightgray;
 }
 
+@media (min-height: 500.5px) {
+    .accessibility {
+        top: 160px;
+    }
+
+    .accessibility .accessibilitySettings {
+        position: absolute;
+        top: 0;
+    }
+}
+
+@media (max-height: 500.5px) {
+    .accessibility {
+        top: 40vh;
+    }
+
+    .accessibility .accessibilitySettings {
+        position: absolute;
+        top: -150%;
+    }
+}
+
 /*****************************************************/
 
 main section {
