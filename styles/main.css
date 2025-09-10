@@ -10,28 +10,44 @@ header .headerBackground {
 }
 
 header .headerBackground * {
-    height: 100px;
     position: absolute;
+    top: 25px;
 }
 
-header .headerBackground .logo {
-    top: 25px;
-    left: 25px; /* 130px */
+@media (min-width: 500.5px) {
+    header .headerBackground * {
+        height: 100px;
+    }
+    
+    header .headerBackground .logo {
+        left: 25px; /* 130px */
+    }
+    
+    header .headerBackground .gold {
+        left: 200px; /* 305px */
+    }
+    
+    header .headerBackground .country {
+        right: 25px; /* left: 25px */
+    }
 }
 
-header .headerBackground .gold {
-    top: 25px;
-    left: 200px; /* 305px */
-}
-
-header .headerBackground .country {
-    top: 25px;
-    right: 220px; /* left: 25px */
-}
-
-header .headerBackground .town {
-    top: 25px;
-    right: 25px;
+@media (max-width: 500.5px) {
+    header .headerBackground * {
+        height: 22vw;
+    }
+    
+    header .headerBackground .logo {
+        left: 25px;
+    }
+    
+    header .headerBackground .gold {
+        left: calc(25px + 37vw);
+    }
+    
+    header .headerBackground .country {
+        right: 25px;
+    }
 }
 
 /*****************************************************/
