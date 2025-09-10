@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const html = document.documentElement;
 
+    // ikony
+
+    feather.replace();
+
     // rozwijanie navbaru
 
     const toggle = document.querySelector(".menuToggle");
@@ -125,8 +129,4 @@ document.addEventListener("DOMContentLoaded", function () {
             child.classList.toggle("contrastWhite");
         });
     }
-
-    // ikony
-
-    feather.replace();
 });
