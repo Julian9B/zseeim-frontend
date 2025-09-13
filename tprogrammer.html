@@ -17,14 +17,12 @@
 
 <body>
     <div class="navbar">
-        <div class="menuToggle"><i data-feather="menu" width="36" height="36"></i></div>
+        <div class="navbarLeft">
+            <a href="index.html" class="mainPageLink">
+                <img src="images/logos/logo.jpg" alt="Strona główna">
+            </a>
+        </div>
         <ul class="navbarList">
-            <li>
-                <a href="index.html" class="navItem mainPageLink">
-                    <img src="images/logos/logo.jpg" alt="Strona główna">
-                    <p>Strona główna</p>
-                </a>
-            </li>
             <li>
                 <a class="navItem">
                     <p>O szkole</p>
@@ -448,24 +446,35 @@
                 </a>
             </li>
         </ul>
+        <div class="navbarRight">
+            <div class="accessibility">
+                <img class="icon" src="images/icons/dostepnosc.png" alt="Ustawienia dostępności">
+                <div class="accessibilitySettings">
+                    <a class="enlargeText"><i data-feather="plus" class="fontIcon smallFontIcon"></i> Powiększ tekst</a>
+                    <a class="reduceText"><i data-feather="minus" class="fontIcon smallFontIcon"></i> Pomniejsz
+                        tekst</a>
+                    <a class="resetText"><i data-feather="refresh-ccw" class="fontIcon smallFontIcon"></i> Normalny
+                        tekst</a>
+                    <a class="toggleGrayscale"><i data-feather="circle" class="fontIcon smallFontIcon"></i> Skala
+                        szarości</a>
+                    <a class="toggleContrast"><i data-feather="sun" class="fontIcon smallFontIcon"></i> Wysoki
+                        kontrast</a>
+                    <a href="#"><i data-feather="menu" class="fontIcon smallFontIcon"></i> Mapa strony</a>
+                </div>
+            </div>
+            <div class="menuToggle">
+                <svg width="40" height="40" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" class="icon">
+                    <use href="images/icons/icons.svg#menu" />
+                </svg>
+            </div>
+        </div>
     </div>
 
     <header>
         <img src="images/pictures/programmer.png" alt="...">
     </header>
-
-    <div class="accessibility">
-        <img class="icon" src="images/icons/dostepnosc.png" alt="Ustawienia dostępności">
-        <div class="accessibilitySettings">
-            <a class="enlargeText"><i data-feather="plus" class="fontIcon smallFontIcon"></i> Powiększ tekst</a>
-            <a class="reduceText"><i data-feather="minus" class="fontIcon smallFontIcon"></i> Pomniejsz tekst</a>
-            <a class="resetText"><i data-feather="refresh-ccw" class="fontIcon smallFontIcon"></i> Normalny tekst</a>
-            <a class="toggleGrayscale"><i data-feather="circle" class="fontIcon smallFontIcon"></i> Skala szarości</a>
-            <a class="toggleContrast"><i data-feather="sun" class="fontIcon smallFontIcon"></i> Wysoki kontrast</a>
-            <a href="#"><i data-feather="menu" class="fontIcon smallFontIcon"></i> Mapa strony</a>
-        </div>
-    </div>
-
+    
     <main>
         <section class="content">
             <h1>Technik programista - twórca cyfrowego świata</h1>

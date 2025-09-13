@@ -49,9 +49,3 @@ header .headerBackground * {
         right: 25px;
     }
 }
-
-/*****************************************************/
-
-.navbar .navbarList {
-    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-}

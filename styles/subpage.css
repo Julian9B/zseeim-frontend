@@ -1,12 +1,9 @@
-.navbar .navbarList {
-    grid-template-columns: 102px repeat(auto-fit, minmax(10px, 1fr));
+.navbar .navbarLeft .mainPageLink img {
+    display: block;
+    width: 102px;
 }
 
-.navbar .mainPageLink img {
-    height: 65px;
-}
-
-.navbar .mainPageLink:hover img {
+.navbar .navbarLeft .mainPageLink:hover img {
     filter: brightness(0.91) contrast(1.4) saturate(0.7);
 }
 

@@ -53,12 +53,9 @@ html {
     user-select: none;
 }
 
-.navbar .menuToggle {
-    display: none;
-    font-size: 28px;
-    color: white;
-    padding: 15px;
-    cursor: pointer;
+.navbar .navbarLeft {
+    display: block;
+    height: 65px;
 }
 
 .navbar .navbarList {
@@ -146,7 +143,85 @@ html {
     margin: 0;
 }
 
+.navbar .navbarList li .subNavbar .highlighted {
+    color: greenyellow;
+}
+
+.navbar .navbarRight .accessibility {
+    height: 65px;
+    width: 65px;
+    cursor: pointer;
+}
+
+.navbar .navbarRight .accessibility:hover {
+    background-color: #036AA0;
+}
+
+.navbar .navbarRight .accessibility .icon {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar .navbarRight .accessibility .accessibilitySettings {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 65px;
+    border: 1px solid black;
+}
+
+.navbar .navbarRight .accessibility:hover .accessibilitySettings {
+    display: block;
+}
+
+.navbar .navbarRight .accessibility .accessibilitySettings a {
+    display: block;
+    position: static;
+    width: 250px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 0;
+    color: black;
+    font-size: 1.05rem;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.navbar .navbarRight .accessibility .accessibilitySettings a:hover {
+    background-color: lightgray;
+}
+
+.navbar .navbarRight .menuToggle {
+    height: 65px;
+    width: 65px;
+    display: none;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .navbarRight .menuToggle .icon {
+    stroke-width: 0.12rem;
+}
+
 @media (pointer: fine) {
+    .navbar {
+        display: flex;
+    }
+
+    .navbar .navbarList {
+        width: calc(100% - 65px);
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    }
+
     .navbar .navbarList li:hover .subNavbar {
         display: flex;
     }
@@ -158,16 +233,18 @@ html {
     .navbar .navbarList li .subNavbarTop {
         bottom: 100%;
     }
+
+    .navbar .navbarRight {
+        width: 65px;
+    }
 }
 
 @media (pointer: coarse) {
-    .navbar .menuToggle {
-        display: block;
-    }
-
     .navbar .navbarList {
         display: flex;
         flex-direction: column;
+        max-height: calc(100vh - 65px);
+        overflow-y: scroll;
     }
 
     .navbar .navbarList {
@@ -180,6 +257,23 @@ html {
 
     .navbar .navbarList li {
         width: 100%;
+    }
+
+    .navbar .navbarRight {
+        display: flex;
+        flex-direction: row;
+        max-height: 65px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .navbar .navbarRight * {
+        display: flex;
+    }
+
+    .navbar .navbarRight .menuToggle {
+        display: flex;
     }
 }
 
@@ -203,91 +297,6 @@ html {
         max-width: 100%;
     }
 } */
-
-.navbar .navbarList li .subNavbar .highlighted {
-    color: greenyellow;
-}
-
-/*****************************************************/
-
-.accessibility {
-    position: fixed;
-    z-index: 15;
-    height: 75px;
-    width: 65px;
-    top: 160px;
-    right: 0;
-    background-color: #0680C1;
-    border-radius: 5px 0 0 5px;
-    cursor: pointer;
-}
-
-.accessibility:hover {
-    background-color: #036AA0;
-}
-
-.accessibility .icon {
-    height: 50px;
-    width: 50px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.accessibility .accessibilitySettings {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 65px;
-    border: 1px solid black;
-}
-
-.accessibility:hover .accessibilitySettings {
-    display: block;
-}
-
-.accessibility .accessibilitySettings a {
-    display: block;
-    position: static;
-    width: 250px;
-    line-height: 50px;
-    text-align: center;
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 0;
-    color: black;
-    font-size: 1.05rem;
-    text-decoration: none;
-    user-select: none;
-    cursor: pointer;
-}
-
-.accessibility .accessibilitySettings a:hover {
-    background-color: lightgray;
-}
-
-@media (min-height: 500.5px) {
-    .accessibility {
-        top: 160px;
-    }
-
-    .accessibility .accessibilitySettings {
-        position: absolute;
-        top: 0;
-    }
-}
-
-@media (max-height: 500.5px) {
-    .accessibility {
-        top: 40vh;
-    }
-
-    .accessibility .accessibilitySettings {
-        position: absolute;
-        top: -150%;
-    }
-}
 
 /*****************************************************/
 
