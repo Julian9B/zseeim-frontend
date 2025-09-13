@@ -27,6 +27,7 @@ html {
 /*****************************************************/
 
 .fontIcon {
+    display: inline;
     position: relative;
 }
 
@@ -169,8 +170,8 @@ html {
 .navbar .navbarRight .accessibility .accessibilitySettings {
     display: none;
     position: absolute;
+    z-index: 15;
     top: 0;
-    right: 65px;
     border: 1px solid black;
 }
 
@@ -198,6 +199,10 @@ html {
     background-color: lightgray;
 }
 
+.navbar .navbarRight .accessibility .accessibilitySettings a svg {
+    display: inline;
+}
+
 .navbar .navbarRight .menuToggle {
     height: 65px;
     width: 65px;
@@ -209,7 +214,7 @@ html {
 }
 
 .navbar .navbarRight .menuToggle .icon {
-    stroke-width: 0.12rem;
+    stroke-width: 2px;
 }
 
 @media (pointer: fine) {
@@ -236,6 +241,10 @@ html {
 
     .navbar .navbarRight {
         width: 65px;
+    }
+
+    .navbar .navbarRight .accessibility .accessibilitySettings {
+        right: 65px;
     }
 }
 
@@ -270,6 +279,10 @@ html {
 
     .navbar .navbarRight * {
         display: flex;
+    }
+
+    .navbar .navbarRight .accessibility .accessibilitySettings {
+        right: 130px;
     }
 
     .navbar .navbarRight .menuToggle {
@@ -337,6 +350,7 @@ main section .containerList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 main section .containerList .containerFrame {
@@ -407,7 +421,7 @@ main section .logoList .logoContainer .imageContainer img:hover {
 }
 
 main section .buttonContainer {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 main section .buttonContainer .moreButton {
