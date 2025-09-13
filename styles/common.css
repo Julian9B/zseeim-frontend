@@ -45,11 +45,20 @@ html {
 /*****************************************************/
 
 .navbar {
+    min-height: 65px;
     background-color: #0680C1;
     position: sticky;
     top: 0;
     z-index: 10;
     user-select: none;
+}
+
+.navbar .menuToggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
 }
 
 .navbar .navbarList {
@@ -137,14 +146,6 @@ html {
     margin: 0;
 }
 
-.navbar .menuToggle {
-    display: none;
-    font-size: 28px;
-    color: white;
-    padding: 15px;
-    cursor: pointer;
-}
-
 @media (pointer: fine) {
     .navbar .navbarList li:hover .subNavbar {
         display: flex;
@@ -196,12 +197,12 @@ html {
     }
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     .navbar .navbarList li .subNavbar li {
         flex: 1 1 100%;
         max-width: 100%;
     }
-}
+} */
 
 .navbar .navbarList li .subNavbar .highlighted {
     color: greenyellow;
@@ -291,7 +292,6 @@ html {
 /*****************************************************/
 
 main section {
-    padding: 20px 30px 50px 30px;
     overflow: auto;
 }
 
@@ -322,6 +322,12 @@ main section ul {
 
 main section ul li {
     margin: 2px 0;
+}
+
+main section .containerList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 main section .containerList .containerFrame {
@@ -391,10 +397,39 @@ main section .logoList .logoContainer .imageContainer img:hover {
     transition: 0.2s;
 }
 
+main section .buttonContainer {
+    margin-bottom: 30px;
+}
+
+main section .buttonContainer .moreButton {
+    display: block;
+    width: 100%;
+    border: 0;
+    background-color: white;
+    color: #0680C1;
+    cursor: pointer;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+main section .buttonContainer .moreButton:hover {
+    color: #035b8b;
+    text-decoration: underline;
+}
+
 @media (min-width: 1100.5px) {
-    main section .containerList {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(12.5%, 1fr));
+    main section {
+        padding: 20px 5vw 50px 5vw;
+    }
+
+    main section .containerList .largeContainerFrame {
+        flex: 1 1 33.33%;
+        max-width: 33.33%;
+    }
+
+    main section .containerList .smallContainerFrame {
+        flex: 1 1 14.28%;
+        max-width: 14.28%;
     }
 
     main section .containerList .largeContainerFrame .container {
@@ -432,16 +467,20 @@ main section .logoList .logoContainer .imageContainer img:hover {
     }
 
     main section .logoList .logoContainer .imageContainer img {
-        max-width: 10vw;
+        max-width: 9vw;
         max-height: 4.5vw;
         margin: auto;
     }
 }
 
 @media (max-width: 1100.5px) {
+    main section {
+        padding: 20px 30px 50px 30px;
+    }
 
-    main section .containerList {
-        display: block;
+    main section .containerList .containerFrame {
+        flex: 1 1 50%;
+        max-width: 50%;
     }
 
     main section .containerList .containerFrame .thumbnailContainer {
@@ -469,33 +508,26 @@ main section .logoList .logoContainer .imageContainer img:hover {
         width: 35%;
         padding: 10px;
     }
+
+    main section .buttonContainer .moreButton {
+        text-align: end;
+    }
 }
 
 @media (max-width: 799.5px) {
     main section .textImage {
         width: 100%;
     }
-}
 
-main section .buttonContainer {
-    margin-bottom: 30px;
-}
+    main section .buttonContainer .moreButton {
+        text-align: center;
+    }
 
-main section .buttonContainer .moreButton {
-    float: right;
-    border: 0;
-    background-color: white;
-    color: #0680C1;
-    cursor: pointer;
-    font-size: 1.3rem;
-    text-decoration: none;
+    main section .containerList .containerFrame {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
-
-main section .buttonContainer .moreButton:hover {
-    color: #035b8b;
-    text-decoration: underline;
-}
-
 
 /*****************************************************/
 
