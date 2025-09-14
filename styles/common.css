@@ -554,56 +554,87 @@ main section .buttonContainer .moreButton:hover {
 
 /*****************************************************/
 
-footer {
-    background-color: #0680C1;
-    min-height: 90px
+footer .menu {
+    background-color: #036AA0;
+    padding: 40px;
 }
 
-footer .archive {
-    top: 20px;
-    left: 25px;
+footer .menu .logo {
+    height: 65px;
+}
+
+footer .options {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0680C1;
+}
+
+footer .options * {
+    display: inline-block;
+    margin: 25px;
+}
+
+footer .options .archive {
     color: white;
 }
 
-footer .archive:hover {
+footer .options .archive:hover {
     color: lightblue;
 }
 
-footer .report {
-    top: 20px;
-    left: 75px;
+footer .options .report {
     color: pink;
 }
 
-footer .report:hover {
+footer .options .report:hover {
     color: rgb(255, 118, 118);
 }
 
-footer input[type=text] {
-    top: 20px;
-    left: 125px;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 1.1rem;
+footer .logos {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+footer .logos .logoContainer {
+    flex: 1 1 33%;
+}
+
+footer .logos .logoContainer * {
+    display: block;
 }
 
 @media (min-width: 800.5px) {
-    footer * {
-        position: relative;
+    footer .logos .logoContainer * {
+        max-height: 65px;
+    }
+
+    footer .logos .funds {
+        margin-left: 5vw;
+    }
+
+    footer .logos .poland {
+        margin: auto;
+    }
+
+    footer .logos .eu {
+        margin-left: auto;
+        margin-right: 5vw;
     }
 }
 
 @media (max-width: 799.5px) {
-    footer {
-        padding: 10px;
+    footer .options * {
+        flex: 1 1 100%;
+        text-align: center;
     }
 
-    footer * {
-        display: block;
-        margin: 20px auto;
-        width: 95%;
-        text-align: center;
+    footer .logos .logoContainer {
+        flex: 1 1 100%;
+    }
+
+    footer .logos .logoContainer * {
+        max-width: 200px;
+        margin: auto;
     }
 }
