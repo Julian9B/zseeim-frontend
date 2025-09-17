@@ -39,9 +39,14 @@ main .adminForm {
 
 main .adminForm input {
     margin: 5px 0 10px 0;
+    padding: 5px;
     width: 100%;
-    min-height: 25px;
     font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+main .adminForm input[type=text], main .adminForm input[type=password] {
+    border: 1px solid lightgray;
 }
 
 main .adminForm #editor {
