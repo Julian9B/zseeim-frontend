@@ -2,34 +2,35 @@
     color: #035b8b;
 }
 
-main * {
+main section {
+    margin: auto;
     max-width: 1000px;
 }
 
-main .message {
+main section .message {
     margin: 10px;
     padding: 10px;
     color: white;
     border-radius: 10px;
 }
 
-main .message a {
+main section .message a {
     color: white;
 }
 
-main .message a:hover {
+main section .message a:hover {
     color: lightgray;
 }
 
-main .fail {
+main section .fail {
     background-color: rgb(255, 96, 96);
 }
 
-main .success {
+main section .success {
     background-color: rgb(70, 171, 70);
 }
 
-main .adminForm {
+main section .adminForm {
     background-color: #f0f0f0;
     margin: 10px;
     padding: 10px;
@@ -37,25 +38,25 @@ main .adminForm {
     font-size: 1.1rem;
 }
 
-main .adminForm input {
+main section .adminForm input {
     margin: 5px 0 10px 0;
-    width: 100%;
+    width: calc(100% - 10px);
     font-size: 1.1rem;
     border-radius: 5px;
 }
 
-main .adminForm input[type=text], main .adminForm input[type=password] {
+main section .adminForm input:not([type=file]) {
     padding: 5px;
     border: 1px solid lightgray;
 }
 
-main .adminForm #editor {
+main section .adminForm #editor {
     margin-bottom: 10px;
     background-color: white;
     min-height: 15vh;
 }
 
-main .adminForm button {
+main section .adminForm button {
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
@@ -63,18 +64,18 @@ main .adminForm button {
     cursor: pointer;
 }
 
-main .adminForm .mainButton {
+main section .adminForm .mainButton {
     border: 1px solid #0680C1;
     background-color: #0680C1;
     color: white;
 }
 
-main .adminForm .mainButton:hover {
+main section .adminForm .mainButton:hover {
     transition: 0.2s;
     background-color: white;
     color: #0680C1;
 }
 
-main small {
+main section small {
     margin: 0 10px;
 }

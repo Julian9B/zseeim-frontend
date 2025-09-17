@@ -6,12 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     feather.replace();
 
+    // ustawienia dostępności
+
+    const accessibilityToggle = document.querySelector(".accessibilityToggle");
+    const accessibilitySettings = document.querySelector(".accessibilitySettings");
+
+    accessibilityToggle.addEventListener("click", () => {
+        accessibilitySettings.classList.toggle("open");
+    });
+
     // rozwijanie navbaru
 
-    const toggle = document.querySelector(".menuToggle");
+    const menuToggle = document.querySelector(".menuToggle");
     const navbarList = document.querySelector(".navbarList");
 
-    toggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", () => {
         navbarList.classList.toggle("open");
     });
 
@@ -88,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // wysoki kontrast
 
     const toggleContrastButton = document.querySelector(".toggleContrast");
-    const accessibility = document.querySelector(".accessibility")
+    const accessibility = document.querySelector(".accessibilityToggle")
     const accessibilityChildren = accessibility.querySelectorAll('*');
     const navbar = document.querySelector(".navbar")
     const navbarChildren = navbar.querySelectorAll('*');

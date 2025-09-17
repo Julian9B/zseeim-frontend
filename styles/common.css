@@ -45,6 +45,46 @@ html {
 
 /*****************************************************/
 
+.accessibilitySettings {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    z-index: 15;
+    border: 1px solid black;
+}
+
+.accessibilitySettings.open {
+    display: block;
+}
+
+.accessibilitySettings a {
+    display: block;
+    position: static;
+    line-height: 50px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 0;
+    color: black;
+    font-size: 1.05rem;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.accessibilitySettings a:hover {
+    background-color: lightgray;
+}
+
+.accessibilitySettings a svg {
+    display: inline;
+}
+
+/*****************************************************/
+
 .navbar {
     min-height: 65px;
     background-color: #0680C1;
@@ -148,59 +188,23 @@ html {
     color: greenyellow;
 }
 
-.navbar .navbarRight .accessibility {
+.navbar .navbarRight .accessibilityToggle {
     height: 65px;
     width: 65px;
     cursor: pointer;
 }
 
-.navbar .navbarRight .accessibility:hover {
+.navbar .navbarRight .accessibilityToggle:hover {
     background-color: #036AA0;
 }
 
-.navbar .navbarRight .accessibility .icon {
+.navbar .navbarRight .accessibilityToggle .icon {
     height: 40px;
     width: 40px;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.navbar .navbarRight .accessibility .accessibilitySettings {
-    display: none;
-    position: absolute;
-    z-index: 15;
-    top: 0;
-    border: 1px solid black;
-}
-
-.navbar .navbarRight .accessibility:hover .accessibilitySettings {
-    display: block;
-}
-
-.navbar .navbarRight .accessibility .accessibilitySettings a {
-    display: block;
-    position: static;
-    width: 250px;
-    line-height: 50px;
-    text-align: center;
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 0;
-    color: black;
-    font-size: 1.05rem;
-    text-decoration: none;
-    user-select: none;
-    cursor: pointer;
-}
-
-.navbar .navbarRight .accessibility .accessibilitySettings a:hover {
-    background-color: lightgray;
-}
-
-.navbar .navbarRight .accessibility .accessibilitySettings a svg {
-    display: inline;
 }
 
 .navbar .navbarRight .menuToggle {
@@ -242,10 +246,6 @@ html {
     .navbar .navbarRight {
         width: 65px;
     }
-
-    .navbar .navbarRight .accessibility .accessibilitySettings {
-        right: 65px;
-    }
 }
 
 @media (pointer: coarse) {
@@ -279,10 +279,6 @@ html {
 
     .navbar .navbarRight * {
         display: flex;
-    }
-
-    .navbar .navbarRight .accessibility .accessibilitySettings {
-        right: 130px;
     }
 
     .navbar .navbarRight .menuToggle {
