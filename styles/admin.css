@@ -1,0 +1,75 @@
+.dynamicTitle {
+    color: #035b8b;
+}
+
+main * {
+    max-width: 1000px;
+}
+
+main .message {
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+main .message a {
+    color: white;
+}
+
+main .message a:hover {
+    color: lightgray;
+}
+
+main .fail {
+    background-color: rgb(255, 96, 96);
+}
+
+main .success {
+    background-color: rgb(70, 171, 70);
+}
+
+main .adminForm {
+    background-color: #f0f0f0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+main .adminForm input {
+    margin: 5px 0 10px 0;
+    width: 100%;
+    min-height: 25px;
+    font-size: 1.1rem;
+}
+
+main .adminForm #editor {
+    margin-bottom: 10px;
+    background-color: white;
+    min-height: 15vh;
+}
+
+main .adminForm button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+main .adminForm .mainButton {
+    border: 1px solid #0680C1;
+    background-color: #0680C1;
+    color: white;
+}
+
+main .adminForm .mainButton:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: #0680C1;
+}
+
+main small {
+    margin: 0 10px;
+}

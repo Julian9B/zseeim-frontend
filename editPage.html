@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edytuj stronę: Przykładowy tytuł</title>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/subpage.css">
+    <link rel="stylesheet" href="styles/admin.css">
+
+    <link rel="shortcut icon" href="images/logos/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbarLeft">
+            <a href="index.html" class="mainPageLink">
+                <img src="images/logos/logo.jpg" alt="Strona główna">
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <h1>Edytuj stronę: <span class="dynamicTitle">Przykładowy tytuł</span></h1>
+
+            <form method="POST" class="adminForm">
+                <input type="hidden" name="id" value="123">
+                <input type="hidden" name="redirect" value="/">
+                <div id="editor">
+                    <p>Tutaj znajduje się przykładowa zawartość strony.</p>
+                </div>
+                <input type="hidden" name="html" id="htmlInput">
+                <button type="submit" class="mainButton">Zapisz zmiany</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+<script>
+    const quill = new Quill('#editor', { theme: 'snow' });
+
+    document.querySelector('form').onsubmit = function () {
+        document.getElementById('htmlInput').value = quill.root.innerHTML;
+    };
+</script>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj stronę</title>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/subpage.css">
+    <link rel="stylesheet" href="styles/admin.css">
+
+    <link rel="shortcut icon" href="images/logos/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbarLeft">
+            <a href="index.html" class="mainPageLink">
+                <img src="images/logos/logo.jpg" alt="Strona główna">
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <h1>Dodaj stronę do: <span class="dynamicTitle">Strona nadrzędna</span></h1>
+
+            <div class="message fail">
+                <p>Wypełnij wszystkie pola</p>
+            </div>
+
+            <form method="POST" enctype="multipart/form-data" class="adminForm">
+                <label>Tytuł: <input type="text" name="title"></label>
+                <label>Treść:</label>
+                <div id="editor"></div>
+                <input type="hidden" name="html" id="htmlInput">
+                <label>Zdjęcie: <input type="file" name="backgroundPhoto"></label>
+                <button type="submit" class="mainButton">Dodaj stronę</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+<script>
+    const quill = new Quill('#editor', { theme: 'snow' });
+    const form = document.querySelector('form');
+    form.onsubmit = () => {
+        document.querySelector('#htmlInput').value = quill.root.innerHTML;
+    };
+</script>
+
+</html>
