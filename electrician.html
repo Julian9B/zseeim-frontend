@@ -18,11 +18,13 @@
 
 <body>
     <div class="accessibilitySettings">
+        <button class="accessibilityClose"><i data-feather="x" class="fontIcon smallFontIcon"></i></button>
         <a class="enlargeText"><i data-feather="plus" class="fontIcon smallFontIcon"></i> Powiększ tekst</a>
         <a class="reduceText"><i data-feather="minus" class="fontIcon smallFontIcon"></i> Pomniejsz tekst</a>
         <a class="resetText"><i data-feather="refresh-ccw" class="fontIcon smallFontIcon"></i> Normalny tekst</a>
         <a class="toggleGrayscale"><i data-feather="circle" class="fontIcon smallFontIcon"></i> Skala szarości</a>
         <a class="toggleContrast"><i data-feather="sun" class="fontIcon smallFontIcon"></i> Wysoki kontrast</a>
+        <a class="toggleImages"><i data-feather="image" class="fontIcon smallFontIcon"></i> Ukryj obrazki</a>
         <a href="#"><i data-feather="menu" class="fontIcon smallFontIcon"></i> Mapa strony</a>
     </div>
 
@@ -457,10 +459,13 @@
             </li>
         </ul>
         <div class="navbarRight">
-            <div class="accessibilityToggle" title="Ustawienia dostępności">
-                <img class="icon" src="images/icons/dostepnosc.png" alt="Ustawienia dostępności">
+            <div class="navbarOption accessibilityToggle" title="Ustawienia dostępności">
+                <svg width="40" height="40" fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" class="icon">
+                    <use href="images/icons/icons.svg#accessibility" />
+                </svg>
             </div>
-            <div class="menuToggle">
+            <div class="navbarOption menuToggle">
                 <svg width="40" height="40" fill="none" stroke="currentColor" stroke-linecap="round"
                     stroke-linejoin="round" class="icon">
                     <use href="images/icons/icons.svg#menu" />

@@ -2,50 +2,60 @@ header {
     height: calc(100vh - 65px);
 }
 
-header .headerBackground {
+/* header .headerBackground {
     background-image: url('../images/pictures/main.png');
     background-size: cover;
     background-position: center;
     height: 100%;
+} */
+
+header .background {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-header .headerBackground * {
+header .image {
     position: absolute;
     top: 25px;
 }
 
 @media (min-width: 500.5px) {
-    header .headerBackground * {
+    header .image {
         height: 100px;
     }
-    
-    header .headerBackground .logo {
-        left: 25px; /* 130px */
+
+    header .logo {
+        left: 25px;
+        /* 130px */
     }
-    
-    header .headerBackground .gold {
-        left: 200px; /* 305px */
+
+    header .gold {
+        left: 200px;
+        /* 305px */
     }
-    
-    header .headerBackground .country {
-        right: 25px; /* left: 25px */
+
+    header .country {
+        right: 25px;
+        /* left: 25px */
     }
 }
 
 @media (max-width: 500.5px) {
-    header .headerBackground * {
+    header .image {
         height: 22vw;
     }
-    
-    header .headerBackground .logo {
+
+    header .logo {
         left: 25px;
     }
-    
-    header .headerBackground .gold {
+
+    header .gold {
         left: calc(25px + 37vw);
     }
-    
-    header .headerBackground .country {
+
+    header .country {
         right: 25px;
     }
 }

@@ -9,10 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // ustawienia dostępności
 
     const accessibilityToggle = document.querySelector(".accessibilityToggle");
+    const accessibilityClose = document.querySelector(".accessibilityClose");
     const accessibilitySettings = document.querySelector(".accessibilitySettings");
 
     accessibilityToggle.addEventListener("click", () => {
         accessibilitySettings.classList.toggle("open");
+    });
+
+    accessibilityClose.addEventListener("click", () => {
+        accessibilitySettings.classList.remove("open");
     });
 
     // rozwijanie navbaru
@@ -97,8 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // wysoki kontrast
 
     const toggleContrastButton = document.querySelector(".toggleContrast");
-    const accessibility = document.querySelector(".accessibilityToggle")
-    const accessibilityChildren = accessibility.querySelectorAll('*');
+    const header = document.querySelector("header")
     const navbar = document.querySelector(".navbar")
     const navbarChildren = navbar.querySelectorAll('*');
     const main = document.querySelector("main")
@@ -113,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleContrastButton.addEventListener("click", () => {
         toggleContrast();
 
-        if (accessibility.classList.contains("contrastWhite")) {
+        if (navbar.classList.contains("contrastYellow")) {
             localStorage.setItem("contrast", "on");
         } else {
             localStorage.setItem("contrast", "off");
@@ -121,10 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function toggleContrast() {
-        accessibility.classList.toggle("contrastWhite");
-        accessibilityChildren.forEach(child => {
-            child.classList.toggle("contrastWhite");
-        });
+        header.classList.toggle("contrastWhite");
         navbar.classList.toggle("contrastYellow");
         navbarChildren.forEach(child => {
             child.classList.toggle("contrastYellow");
@@ -136,6 +137,31 @@ document.addEventListener("DOMContentLoaded", function () {
         footer.classList.toggle("contrastWhite");
         footerChildren.forEach(child => {
             child.classList.toggle("contrastWhite");
+        });
+    }
+
+    // ukryj obrazki
+
+    const toggleImagesButton = document.querySelector(".toggleImages");
+    const images = document.querySelectorAll('img:not(.navbar img)');
+
+    if (localStorage.getItem("images") === "off") {
+        toggleImages();
+    }
+
+    toggleImagesButton.addEventListener("click", () => {
+        toggleImages();
+
+        if (document.querySelector('img:not(.navbar img)').classList.contains("hidden")) {
+            localStorage.setItem("images", "off");
+        } else {
+            localStorage.setItem("images", "on");
+        }
+    });
+
+    function toggleImages() {
+        images.forEach(image => {
+            image.classList.toggle("hidden");
         });
     }
 });

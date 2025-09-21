@@ -8,7 +8,7 @@ main section {
 }
 
 main section .message {
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
     color: white;
     border-radius: 10px;
@@ -32,7 +32,7 @@ main section .success {
 
 main section .adminForm {
     background-color: #f0f0f0;
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
     border-radius: 10px;
     font-size: 1.1rem;
@@ -56,7 +56,11 @@ main section .adminForm #editor {
     min-height: 15vh;
 }
 
-main section .adminForm button {
+main section .buttonGroup {
+    display: inline-block;
+}
+
+main section button {
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
@@ -64,18 +68,26 @@ main section .adminForm button {
     cursor: pointer;
 }
 
-main section .adminForm .mainButton {
+main section .primaryButton {
     border: 1px solid #0680C1;
     background-color: #0680C1;
     color: white;
 }
 
-main section .adminForm .mainButton:hover {
+main section .primaryButton:hover {
     transition: 0.2s;
     background-color: white;
     color: #0680C1;
 }
 
-main section small {
-    margin: 0 10px;
+main section .secondaryButton {
+    border: 1px solid #999999;
+    background-color: #999999;
+    color: white;
+}
+
+main section .secondaryButton:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: #999999;
 }
