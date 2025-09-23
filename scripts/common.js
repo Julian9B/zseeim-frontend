@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ukryj obrazki
 
     const toggleImagesButton = document.querySelector(".toggleImages");
-    const images = document.querySelectorAll('img:not(.navbar img)');
+    const images = document.querySelectorAll('img:not(.navbar img):not(footer img)');
 
     if (localStorage.getItem("images") === "off") {
         toggleImages();

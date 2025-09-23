@@ -59,35 +59,3 @@ main section .adminForm #editor {
 main section .buttonGroup {
     display: inline-block;
 }
-
-main section button {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-main section .primaryButton {
-    border: 1px solid #0680C1;
-    background-color: #0680C1;
-    color: white;
-}
-
-main section .primaryButton:hover {
-    transition: 0.2s;
-    background-color: white;
-    color: #0680C1;
-}
-
-main section .secondaryButton {
-    border: 1px solid #999999;
-    background-color: #999999;
-    color: white;
-}
-
-main section .secondaryButton:hover {
-    transition: 0.2s;
-    background-color: white;
-    color: #999999;
-}

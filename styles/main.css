@@ -2,13 +2,6 @@ header {
     height: calc(100vh - 65px);
 }
 
-/* header .headerBackground {
-    background-image: url('../images/pictures/main.png');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-} */
-
 header .background {
     height: 100%;
     width: 100%;
@@ -58,4 +51,10 @@ header .image {
     header .country {
         right: 25px;
     }
+}
+
+/*****************************************************/
+
+main section h1 {
+    margin: 15px 10px;
 }

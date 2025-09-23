@@ -70,14 +70,14 @@ img.hidden {
 
 .accessibilitySettings .accessibilityClose {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    height: 30px;
-    width: 30px;
+    top: -20px;
+    right: -20px;
+    height: 40px;
+    width: 40px;
     background-color: rgb(255, 96, 96);
     color: white;
     border: 1px solid rgb(255, 96, 96);
-    border-radius: 0;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -89,7 +89,7 @@ img.hidden {
 .accessibilitySettings a {
     display: block;
     position: static;
-    line-height: 50px;
+    line-height: 45px;
     text-align: center;
     background-color: #f0f0f0;
     border: none;
@@ -315,13 +315,6 @@ img.hidden {
     }
 }
 
-/* @media (max-width: 500px) {
-    .navbar .navbarList li .subNavbar li {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-} */
-
 /*****************************************************/
 
 main section {
@@ -339,11 +332,15 @@ main section:nth-child(even) {
 main section h1 {
     font-size: 2rem;
     font-weight: normal;
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
 
-main section p {
+main section .wrapper {
+    background-color: #f0f0f0;
+    margin-top: 20px;
+    padding: 20px;
     font-size: 1.2rem;
+    border-radius: 10px;
 }
 
 main section ul {
@@ -450,6 +447,38 @@ main section .buttonContainer .moreButton:hover {
     text-decoration: underline;
 }
 
+main section button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+main section .primaryButton {
+    border: 1px solid #0680C1;
+    background-color: #0680C1;
+    color: white;
+}
+
+main section .primaryButton:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: #0680C1;
+}
+
+main section .secondaryButton {
+    border: 1px solid #999999;
+    background-color: #999999;
+    color: white;
+}
+
+main section .secondaryButton:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: #999999;
+}
+
 @media (min-width: 1100.5px) {
     main section {
         padding: 20px 5vw 50px 5vw;
@@ -511,6 +540,10 @@ main section .buttonContainer .moreButton:hover {
         padding: 20px 30px 50px 30px;
     }
 
+    main section h1 {
+        text-align: center;
+    }
+
     main section .containerList .containerFrame {
         flex: 1 1 50%;
         max-width: 50%;
@@ -532,6 +565,11 @@ main section .buttonContainer .moreButton:hover {
         margin: auto;
         width: 100%;
         max-width: 200px;
+    }
+
+    main section .button {
+        display: block;
+        margin: auto;
     }
 }
 
