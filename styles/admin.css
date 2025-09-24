@@ -2,6 +2,34 @@
     color: #035b8b;
 }
 
+/*****************************************************/
+
+.navbar .navbarRight .logout {
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 65px;
+    width: 102px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.navbar .navbarRight .logout:hover {
+    background-color: #036AA0;
+}
+
+.navbar .navbarRight .logout p {
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/*****************************************************/
+
 main section {
     margin: auto;
     max-width: 1000px;
