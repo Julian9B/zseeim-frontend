@@ -329,10 +329,13 @@ main section:nth-child(even) {
     background-color: #f0f0f0;
 }
 
-main section h1 {
-    font-size: 2rem;
+main section h1, main section h2 {
     font-weight: normal;
     margin-bottom: 15px;
+}
+
+main section h1 {
+    font-size: 2rem;
 }
 
 main section .wrapper {
@@ -477,6 +480,30 @@ main section .secondaryButton:hover {
     transition: 0.2s;
     background-color: white;
     color: #999999;
+}
+
+main section .successButton {
+    border: 1px solid rgb(70, 171, 70);
+    background-color: rgb(70, 171, 70);
+    color: white;
+}
+
+main section .successButton:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: rgb(70, 171, 70);
+}
+
+main section .dangerButton {
+    border: 1px solid rgb(255, 96, 96);
+    background-color: rgb(255, 96, 96);
+    color: white;
+}
+
+main section .dangerButton:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: rgb(255, 96, 96);
 }
 
 @media (min-width: 1100.5px) {
