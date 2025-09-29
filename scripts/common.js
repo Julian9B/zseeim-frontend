@@ -143,7 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // ukryj obrazki
 
     const toggleImagesButton = document.querySelector(".toggleImages");
-    const images = document.querySelectorAll('img:not(.navbar img):not(footer img)');
 
     if (localStorage.getItem("images") === "off") {
         toggleImages();
@@ -152,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleImagesButton.addEventListener("click", () => {
         toggleImages();
 
-        if (document.querySelector('img:not(.navbar img)').classList.contains("hidden")) {
+        if (html.classList.contains("imagesHidden")) {
             localStorage.setItem("images", "off");
         } else {
             localStorage.setItem("images", "on");
@@ -160,8 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function toggleImages() {
-        images.forEach(image => {
-            image.classList.toggle("hidden");
-        });
+        html.classList.toggle("imagesHidden");
     }
 });

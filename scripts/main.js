@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.addEventListener("scroll", (event) => { })
+    const navbar = document.querySelector(".navbar");
 
-    onscroll = (event) => {
+    navbar.addEventListener("mouseenter", (event) => {
+        let navbar = document.querySelector(".navbar");
         let subNavbars = document.querySelectorAll(".subNavbar");
 
-        if (window.scrollY > 320) {
+        console.log(navbar.getBoundingClientRect().y);
+
+        if (navbar.getBoundingClientRect().y < 320) {
             subNavbars.forEach(subNavbar => {
                 subNavbar.classList.remove("subNavbarTop");
                 subNavbar.classList.add("subNavbarBottom");
@@ -15,5 +18,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 subNavbar.classList.add("subNavbarTop");
             });
         }
-    }
+    });
 })

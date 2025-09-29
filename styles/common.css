@@ -14,6 +14,8 @@ html {
     filter: grayscale(100%);
 }
 
+/*****************************************************/
+
 .contrastYellow {
     background-color: black !important;
     color: yellow !important;
@@ -28,8 +30,26 @@ html {
     border: 2px solid white !important;
 }
 
-img.hidden {
+/*****************************************************/
+
+.imagesHidden img:not(.navbar img):not(footer img) {
     display: none !important;
+}
+
+.imagesHidden .thumbnailContainer {
+    height: 100px;
+}
+
+.imagesHidden .imageContainer {
+    display: none !important;
+}
+
+.imagesHidden .titleContainer {
+    height: 100%;
+}
+
+.imagesHidden .logoDesc {
+    display: block;
 }
 
 /*****************************************************/
@@ -329,7 +349,8 @@ main section:nth-child(even) {
     background-color: #f0f0f0;
 }
 
-main section h1, main section h2 {
+main section h1,
+main section h2 {
     font-weight: normal;
     margin-bottom: 15px;
 }
@@ -398,7 +419,7 @@ main section .containerList .containerFrame .thumbnailContainer * {
     margin: auto;
 }
 
-main section .containerList .containerFrame .thumbnailContainer .imageContainer {
+main section .containerList .containerFrame .thumbnailContainer .imageContainer:not(.imagesHidden .imageContainer) {
     display: flex;
     justify-content: center;
     height: 75%;
@@ -411,23 +432,35 @@ main section .containerList .containerFrame .thumbnailContainer .imageContainer 
 }
 
 main section .containerList .containerFrame .thumbnailContainer .titleContainer {
-    display: block;
-    height: 25%;
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section .containerList .containerFrame .thumbnailContainer .titleContainer:not(.imagesHidden .titleContainer) {
+    height: 25%;
 }
 
 main section .containerList .containerFrame .thumbnailContainer div p {
     text-align: center;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 1.1rem;
 }
 
-main section .logoList .logoContainer .imageContainer img:hover {
+main section .logoList .logoContainer {
+    text-decoration: none;
+}
+
+main section .logoList .logoContainer:hover {
     transform: scale(1.1);
     transition: 0.2s;
+}
+
+main section .logoList .logoContainer .logoDesc:not(.imagesHidden .logoDesc) {
+    display: none;
+    text-align: center;
+    color: black;
+    font-size: 1.1rem;
 }
 
 main section .buttonContainer {
@@ -530,13 +563,19 @@ main section .dangerButton:hover {
     }
 
     main section .containerList .largeContainerFrame .thumbnailContainer {
-        height: 29vw;
         border-radius: 10px;
     }
 
+    main section .containerList .largeContainerFrame .thumbnailContainer:not(.imagesHidden .thumbnailContainer) {
+        height: 29vw;
+    }
+
     main section .containerList .smallContainerFrame .thumbnailContainer {
-        height: 33vh;
         border-radius: 5px;
+    }
+
+    main section .containerList .smallContainerFrame .thumbnailContainer:not(.imagesHidden .thumbnailContainer) {
+        height: 33vh;
     }
 
     main section .logoList {
@@ -577,9 +616,12 @@ main section .dangerButton:hover {
     }
 
     main section .containerList .containerFrame .thumbnailContainer {
-        height: 350px;
         max-width: 350px;
         border-radius: 10px;
+    }
+
+    main section .containerList .containerFrame .thumbnailContainer:not(.imagesHidden .thumbnailContainer) {
+        height: 350px;
     }
 
     main section .logoList .logoContainer {
