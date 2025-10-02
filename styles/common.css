@@ -350,7 +350,8 @@ main section:nth-child(even) {
 }
 
 main section h1,
-main section h2 {
+main section h2,
+main section h3 {
     font-weight: normal;
     margin-bottom: 15px;
 }
@@ -362,9 +363,31 @@ main section h1 {
 main section .wrapper {
     background-color: #f0f0f0;
     margin-top: 20px;
-    padding: 20px;
     font-size: 1.2rem;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+main section .textWrapper {
+    padding: 20px;
+}
+
+main section .wrapper h3 {
+    margin: 0;
+    padding: 20px;
+    cursor: pointer;
+}
+
+main section .wrapper h3:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+main section .wrapper h3:hover {
+    background-color: lightgray;
+}
+
+main section .wrapper p {
+    margin-bottom: 20px;
 }
 
 main section ul {
