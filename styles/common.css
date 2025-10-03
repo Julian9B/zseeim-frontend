@@ -71,6 +71,12 @@ html {
     top: 4px;
 }
 
+.veryLargeFontIcon {
+    height: 1.5rem;
+    stroke-width: 1.9;
+    top: 4px;
+}
+
 /*****************************************************/
 
 .accessibilitySettings {
@@ -360,6 +366,10 @@ main section h1 {
     font-size: 2rem;
 }
 
+main section .textImage {
+    border-radius: 10px;
+}
+
 main section .wrapper {
     background-color: #f0f0f0;
     margin-top: 20px;
@@ -372,18 +382,22 @@ main section .textWrapper {
     padding: 20px;
 }
 
-main section .wrapper h3 {
+main section .wrapper div:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+main section .wrapper div h3 {
     margin: 0;
     padding: 20px;
     cursor: pointer;
 }
 
-main section .wrapper h3:nth-child(even) {
-    background-color: #f8f8f8;
+main section .wrapper div h3:hover {
+    background-color: lightgray;
 }
 
-main section .wrapper h3:hover {
-    background-color: lightgray;
+main section .wrapper div p {
+    margin: 0 20px 20px 20px;
 }
 
 main section .wrapper p {
@@ -472,6 +486,7 @@ main section .containerList .containerFrame .thumbnailContainer div p {
 
 main section .logoList .logoContainer {
     text-decoration: none;
+    color: black;
 }
 
 main section .logoList .logoContainer:hover {
@@ -482,7 +497,6 @@ main section .logoList .logoContainer:hover {
 main section .logoList .logoContainer .logoDesc:not(.imagesHidden .logoDesc) {
     display: none;
     text-align: center;
-    color: black;
     font-size: 1.1rem;
 }
 
@@ -669,7 +683,7 @@ main section .dangerButton:hover {
     main section .textImage {
         float: right;
         width: 35%;
-        padding: 10px;
+        margin-left: 20px;
     }
 
     main section .buttonContainer .moreButton {
@@ -680,6 +694,7 @@ main section .dangerButton:hover {
 @media (max-width: 799.5px) {
     main section .textImage {
         width: 100%;
+        margin-bottom: 20px;
     }
 
     main section .buttonContainer .moreButton {
