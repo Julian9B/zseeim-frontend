@@ -36,6 +36,10 @@ html {
     display: none !important;
 }
 
+.imagesHidden video:not(.navbar video):not(footer video) {
+    display: none !important;
+}
+
 .imagesHidden .thumbnailContainer {
     height: 100px;
 }
